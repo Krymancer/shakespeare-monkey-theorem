@@ -11,8 +11,11 @@ all: app
 app: main.o
 	@$(CC) $(OBJ)* -o $(BIN)app $(FLAGS)
 	
-main.o:
+main.o: Phrase.o
 	@$(CC) $(IPATH) -c $(SRC)main.cpp -o $(OBJ)main.o
+
+Phrase.o: 
+	@$(CC) $(IPATH) -c $(SRC)Phrase.cpp -o $(OBJ)Phrase.o
 
 run:
 	@./bin/app

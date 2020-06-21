@@ -8,7 +8,7 @@ FLAGS=-std=c++11 -w
 all: app
 	@echo "Sucess"
 
-app: main.o engine.o
+app: main.o
 	@$(CC) $(OBJ)* -o $(BIN)app $(FLAGS)
 	
 main.o:
